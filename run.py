@@ -3,7 +3,8 @@ from flask_cors import CORS
 from app.routes import (
     chatbot_routes,
     login_routes,
-    search_routes,
+    recommendation_routes,
+    search_routes
 )
 from app.utils.db import init_db
 
@@ -15,8 +16,10 @@ def create_app():
     init_db(app)
 
     # Register blueprints with original endpoints
+
     app.register_blueprint(chatbot_routes.bp)
     app.register_blueprint(login_routes.bp)
+    app.register_blueprint(recommendation_routes.bp)
     app.register_blueprint(search_routes.bp)
 
     return app
