@@ -1,8 +1,10 @@
 from flask_pymongo import PyMongo
-from app.config.settings import MONGO_URI
+from app.config.settings import config
 
 mongo = PyMongo()
 
 def init_db(app):
-    mongo.init_app(app, uri=MONGO_URI)
+    """Initialize MongoDB connection"""
+    app.config['MONGO_URI'] = config.MONGO_URI
+    mongo.init_app(app)
     return mongo 
