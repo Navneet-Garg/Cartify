@@ -1,0 +1,14 @@
+flask
+flask-cors
+flask-pymongo
+python-dotenv
+google-generativeai
+transformers
+tf-keras
+torch
+tensorflow
+numpy
+scikit-learn
+pandas
+Pillow
+gdown
