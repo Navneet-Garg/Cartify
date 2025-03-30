@@ -1,3 +1,3 @@
 """
-Configuration settings and constants.
+Configuration package.
 """ 
